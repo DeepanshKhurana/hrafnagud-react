@@ -1,0 +1,202 @@
+/*
+  Theme and global variables
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Inter:300,400,600,700,900');
+
+/* Base styles */
+body {
+  background: rgba(242, 233, 228, 0.063);
+  font-family: Inter, sans-serif;
+  margin: 10px 20px;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+  margin: 0 !important;
+  color: #333;
+}
+
+.hrafnagud-body {
+  height: 100vh;
+}
+
+hr {
+  border-top: 1px solid #666;
+  margin-top: 20px;
+}
+
+/* Welcome section */
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome .hi-message {
+  font-size: 64px;
+  font-weight: 900;
+}
+
+.welcome .weather-info {
+  display: flex;
+  align-items: center;
+}
+
+.welcome .temperature {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Card styles */
+.card {
+  box-shadow: 6px 6px #524450;
+  border: 1px solid #9a8c98;
+  width: 95%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card .key-info-line {
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card .key-info-line .first {
+  font-size: 36px;
+}
+
+.card .key-info-line .second {
+  font-size: 16px;
+}
+
+.card .key-info-emoji {
+  font-size: 64px;
+}
+
+.card .card-footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .card-footer .status-circle {
+  border: 0;
+  background: 0;
+  padding: 0.5px;
+}
+
+.card .card-footer button.status-circle.btn-default:hover {
+  filter: brightness(1.25);
+  border: unset !important;
+  background: unset !important;
+  color: unset !important;
+  padding: 0.5px;
+}
+
+.card .card-footer .status-circle:active,
+.card .card-footer .status-circle:focus,
+.card .card-footer .status-circle:focus-within,
+.card .card-footer .status-circle:focus-visible,
+.card .card-footer .status-circle:target {
+  border: 0;
+  background: 0;
+  outline: unset;
+  padding: 0.5px;
+}
+
+.card .card-footer .red {
+  color: #a50e0e;
+}
+
+.card .card-footer .green {
+  color: #3a5a40;
+}
+
+.card .card-footer .yellow {
+  color: #ab8922;
+}
+
+.card .card-footer .goto-button {
+  color: #666;
+  border: 1px solid #666;
+  padding: 6px 10px;
+}
+
+/* Module styles */
+.modules {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.module {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+/* Utility classes */
+.greyscale {
+  filter: grayscale(100%);
+  color: #999;
+  box-shadow: 6px 6px #999;
+}
+
+.clock.recalculating {
+  opacity: 1;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .welcome {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px !important;
+  }
+
+  .welcome .hi-message {
+    font-size: 48px !important;
+  }
+
+  .welcome .weather-info {
+    display: none !important;
+  }
+
+  .card .key-info-emoji {
+    font-size: 36px;
+  }
+
+  .card .key-info-line .first {
+    font-size: 24px;
+  }
+
+  .card .key-info-line .second {
+    font-size: 12px;
+  }
+
+  .module {
+    width: 100%;
+  }
+
+  .footer {
+    display: none !important;
+  }
+}
