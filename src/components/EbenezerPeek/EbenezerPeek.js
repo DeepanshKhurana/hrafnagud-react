@@ -1,23 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import Peek from '../Peek';
 import { processApiWithCache } from '../../apiUtils';
-
-const shortenPrice = (price, decimals) => {
-  const suffixes = ['', 'K', 'M', 'B', 'T'];
-  let suffixIndex = 0;
-  while (price >= 1000 && suffixIndex < suffixes.length - 1) {
-    price /= 1000;
-    suffixIndex++;
-  }
-  return `$${price.toFixed(decimals)}${suffixes[suffixIndex]}`;
-};
+import { shortenPrice } from '../../utils';
 
 const EbenezerPeek = () => {
   const [networth, setNetworth] = useState(null);
+  const [loans, setLoans] = useState(null);
   const [cacheStatus, setCacheStatus] = useState('gray');
   
   const fetchData = async (forceRefresh = false) => {
     const { response, status } = await processApiWithCache('ebenezer/networth', forceRefresh);
+    setLoans(response.loans);
     setNetworth(response.networth);
     setCacheStatus(status);
   };
@@ -31,15 +24,22 @@ const EbenezerPeek = () => {
   };
 
   if (!networth) {
-    return <div>Loading...</div>;
+    return (
+      <Peek 
+        firstSentence="Loading..."
+        secondSentence="Please wait while the data loads."
+        emoji="⏳"
+        buttonLink="#"
+        buttonName="Refresh"
+        isLive={false} 
+        cardClass="loading-card"
+      />
+    );
   }
-
-  console.log(networth);
 
   const current = shortenPrice(networth.current, 2);
   const invested = shortenPrice(networth.invested, 2); 
-  console.log(networth.loans);
-  const loanAmount = shortenPrice(-1 * networth.loans, 2);
+  const loanAmount = shortenPrice(-1 * loans.current, 2);
 
   return (
     <Peek

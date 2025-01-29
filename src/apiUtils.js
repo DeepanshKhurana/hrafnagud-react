@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const makeEndpoint = (...parts) => {
   const path = parts.join('/');
@@ -27,29 +28,21 @@ const getCacheStatus = async (endpoint) => {
         const params = new URLSearchParams({ endpoint });
         const fullUrl = `${url}?${params.toString()}`;
 
-        const response = await fetch(fullUrl, {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/json',
-            'X-API-KEY': getApiKey(),
-            // Add these headers to handle potential CORS issues
-            'Origin': window.location.origin
-        }
+        const response = await axios.get(fullUrl, {
+            headers: {
+                'Accept': 'application/json',
+                'X-API-KEY': getApiKey(),
+                'Origin': window.location.origin
+            }
         });
 
-        if (!response.ok) {
-        // Attempt to get error text for more context
-        const errorText = await response.text();
-        throw new Error(`HTTP error! status: ${response.status}, message: ${errorText}`);
-        }
-
-        return await response.json();
+        return response.data;
     } catch (error) {
-        console.error('Fetch error:', error);
+        console.error('Axios error:', error);
         // Provide a more informative error
         throw new Error(`Failed to fetch cache status: ${error.message}`);
     }
-    };
+};
   
 const processApi = async (endpoint, cached = false) => {
     try {
@@ -57,24 +50,17 @@ const processApi = async (endpoint, cached = false) => {
         const params = new URLSearchParams({ cached: cached.toString() });
         const fullUrl = `${url}?${params.toString()}`;
 
-        const response = await fetch(fullUrl, {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/json',
-            'X-API-KEY': getApiKey(),
-            // Add these headers to handle potential CORS issues
-            'Origin': window.location.origin
-        }
+        const response = await axios.get(fullUrl, {
+            headers: {
+                'Accept': 'application/json',
+                'X-API-KEY': getApiKey(),
+                'Origin': window.location.origin
+            }
         });
 
-        if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(`HTTP error! status: ${response.status}, message: ${errorText}`);
-        }
-
-        return await response.json();
+        return response.data;
     } catch (error) {
-        console.error('Fetch error:', error);
+        console.error('Axios error:', error);
         throw new Error(`Failed to fetch ${endpoint}: ${error.message}`);
     }
 };

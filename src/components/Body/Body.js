@@ -6,13 +6,8 @@ const Body = () => {
   return (
     <div className="hrafnagud-body">
       <div className="modules">
-        <div className="module">
-          <HugoPeek />
-        </div>
-        <div className="module">
-          <EbenezerPeek />
-        </div>
-        
+        <HugoPeek />
+        <EbenezerPeek />
       </div>
     </div>
   );
