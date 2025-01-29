@@ -1,5 +1,6 @@
 import React from 'react';
 import HugoPeek from '../HugoPeek';
+import EbenezerPeek from '../EbenezerPeek/EbenezerPeek';
 
 const Body = () => {
   return (
@@ -8,6 +9,10 @@ const Body = () => {
         <div className="module">
           <HugoPeek />
         </div>
+        <div className="module">
+          <EbenezerPeek />
+        </div>
+        
       </div>
     </div>
   );
