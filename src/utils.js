@@ -13,3 +13,12 @@ export const range = (start, end, step = 1) => {
   }
   return output;
 };
+
+export const getRandomGreeting = (name = "Deepansh") => {
+  const greetings = ["Hello", "Howdy", "Hey", "Hola"];
+  const emojis = ["👋", "🤟", "🙌", "✌️"];
+  
+  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+  return `${greeting}, ${name}! ${emoji}`;
+};

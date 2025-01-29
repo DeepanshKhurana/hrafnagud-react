@@ -18629,38 +18629,74 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _s = $RefreshSig$();
+var _weather = require("../Weather");
+var _weatherDefault = parcelHelpers.interopDefault(_weather);
+var _utils = require("../../utils");
 const Header = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "welcome",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "hi-message",
+                children: (0, _utils.getRandomGreeting)()
+            }, void 0, false, {
+                fileName: "src/components/Header/Header.js",
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _weatherDefault.default), {}, void 0, false, {
+                fileName: "src/components/Header/Header.js",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Header/Header.js",
+        lineNumber: 7,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Header;
+exports.default = Header;
+var _c;
+$RefreshReg$(_c, "Header");
+
+  $parcel$ReactRefreshHelpers$a077.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../Weather":"7lsGk","../../utils":"en4he","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7lsGk":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>(0, _weatherDefault.default));
+var _weather = require("./Weather");
+parcelHelpers.exportAll(_weather, exports);
+var _weatherDefault = parcelHelpers.interopDefault(_weather);
+
+},{"./Weather":"gXV3I","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gXV3I":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$67e0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$67e0.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
+const Weather = ()=>{
     _s();
     const [weather, setWeather] = (0, _react.useState)(null);
-    const [location, setLocation] = (0, _react.useState)(null);
-    const greetings = [
-        "Hello",
-        "Howdy",
-        "Hey",
-        "Hola"
-    ];
-    const emojis = [
-        "\uD83D\uDC4B",
-        "\uD83E\uDD1F",
-        "\uD83D\uDE4C",
-        "\u270C\uFE0F"
-    ];
-    const name = "Deepansh";
-    const getRandomGreeting = ()=>{
-        const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-        const emoji = emojis[Math.floor(Math.random() * emojis.length)];
-        return `${greeting}, ${name}! ${emoji}`;
-    };
     (0, _react.useEffect)(()=>{
         if ("geolocation" in navigator) navigator.geolocation.getCurrentPosition(async (position)=>{
             const { latitude, longitude } = position.coords;
             try {
-                // Get weather directly using coordinates
                 const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${"38154502cae17bc407ba3162262059e3"}&units=metric`);
                 const data = await response.json();
                 if (data) {
-                    // If multiple weather conditions, randomly select one (like in R code)
                     const weatherIndex = data.weather.length > 1 ? Math.floor(Math.random() * data.weather.length) : 0;
                     setWeather({
                         temp: Math.round(data.main.temp),
@@ -18674,79 +18710,63 @@ const Header = ()=>{
             }
         });
     }, []);
+    if (!weather) return null;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "welcome",
+        className: "weather-info",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "hi-message",
-                children: getRandomGreeting()
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: `https://openweathermap.org/img/wn/${weather.icon}@2x.png`,
+                alt: weather.description
             }, void 0, false, {
-                fileName: "src/components/Header/Header.js",
-                lineNumber: 49,
+                fileName: "src/components/Weather/Weather.js",
+                lineNumber: 38,
                 columnNumber: 7
             }, undefined),
-            weather && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "weather-info",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        src: `https://openweathermap.org/img/wn/${weather.icon}@2x.png`,
-                        alt: weather.description
-                    }, void 0, false, {
-                        fileName: "src/components/Header/Header.js",
-                        lineNumber: 55,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "temperature",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "temperature",
-                                children: [
-                                    weather.temp,
-                                    "\u2103"
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/Header/Header.js",
-                                lineNumber: 60,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "description",
-                                children: [
-                                    weather.description,
-                                    " in ",
-                                    weather.city
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/Header/Header.js",
-                                lineNumber: 63,
-                                columnNumber: 13
-                            }, undefined)
+                            weather.temp,
+                            "\u2103"
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/Header/Header.js",
-                        lineNumber: 59,
-                        columnNumber: 11
+                        fileName: "src/components/Weather/Weather.js",
+                        lineNumber: 43,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "description",
+                        children: [
+                            weather.description,
+                            " in ",
+                            weather.city
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Weather/Weather.js",
+                        lineNumber: 46,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/Header/Header.js",
-                lineNumber: 54,
-                columnNumber: 9
+                fileName: "src/components/Weather/Weather.js",
+                lineNumber: 42,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/Header/Header.js",
-        lineNumber: 48,
+        fileName: "src/components/Weather/Weather.js",
+        lineNumber: 37,
         columnNumber: 5
     }, undefined);
 };
-_s(Header, "Y795PiPkZkdomVtQWjRy7BA7n34=");
-_c = Header;
-exports.default = Header;
+_s(Weather, "zh6OemVMK1sGCMM7fACoVGDcjjs=");
+_c = Weather;
+exports.default = Weather;
 var _c;
-$RefreshReg$(_c, "Header");
+$RefreshReg$(_c, "Weather");
 
-  $parcel$ReactRefreshHelpers$a077.postlude(module);
+  $parcel$ReactRefreshHelpers$67e0.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
@@ -18919,6 +18939,42 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}],"8XPx9":[function() {},{}],"lW6qc":[function() {},{}]},["farZc","1xC6H","8lqZg"], "8lqZg", "parcelRequire58be")
+},{"7422ead32dcc1e6b":"786KC"}],"en4he":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "sample", ()=>sample);
+parcelHelpers.export(exports, "range", ()=>range);
+parcelHelpers.export(exports, "getRandomGreeting", ()=>getRandomGreeting);
+const sample = (arr)=>{
+    return arr[Math.floor(Math.random() * arr.length)];
+};
+const range = (start, end, step = 1)=>{
+    let output = [];
+    if (typeof end === "undefined") {
+        end = start;
+        start = 0;
+    }
+    for(let i = start; i < end; i += step)output.push(i);
+    return output;
+};
+const getRandomGreeting = (name = "Deepansh")=>{
+    const greetings = [
+        "Hello",
+        "Howdy",
+        "Hey",
+        "Hola"
+    ];
+    const emojis = [
+        "\uD83D\uDC4B",
+        "\uD83E\uDD1F",
+        "\uD83D\uDE4C",
+        "\u270C\uFE0F"
+    ];
+    const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+    const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+    return `${greeting}, ${name}! ${emoji}`;
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8XPx9":[function() {},{}],"lW6qc":[function() {},{}]},["farZc","1xC6H","8lqZg"], "8lqZg", "parcelRequire58be")
 
 //# sourceMappingURL=index.975ef6c8.js.map
