@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .hrafnagud-body {
+  width: 95%;
   height: 100vh;
 }
 
@@ -38,14 +39,13 @@ hr {
 }
 
 .welcome .temperature {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .card {
   border: 1px solid #9a8c98;
-  width: 95%;
-  margin-bottom: 20px;
+  margin: 20px 0;
   padding: 20px;
   box-shadow: 6px 6px #524450;
 }
@@ -59,10 +59,12 @@ hr {
 }
 
 .card .key-info-line .first {
+  margin-bottom: 10px;
   font-size: 36px;
 }
 
 .card .key-info-line .second {
+  margin-bottom: 10px;
   font-size: 16px;
 }
 
@@ -114,6 +116,12 @@ hr {
   color: #666;
   border: 1px solid #666;
   padding: 6px 10px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.card .card-footer .goto-button:hover {
+  text-decoration: underline;
 }
 
 .modules {

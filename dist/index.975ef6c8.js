@@ -18587,23 +18587,30 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _header = require("../Header/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
+var _body = require("../Body/Body");
+var _bodyDefault = parcelHelpers.interopDefault(_body);
 function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/components/App/App.js",
-                lineNumber: 6,
+                lineNumber: 7,
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
                 fileName: "src/components/App/App.js",
-                lineNumber: 7,
+                lineNumber: 8,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+                fileName: "src/components/App/App.js",
+                lineNumber: 9,
                 columnNumber: 5
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/App/App.js",
-        lineNumber: 5,
+        lineNumber: 6,
         columnNumber: 4
     }, this);
 }
@@ -18617,7 +18624,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../Header/Header":"8iwn3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8iwn3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../Header/Header":"8iwn3","../Body/Body":"deyeP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8iwn3":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$a077 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -18975,6 +18982,268 @@ const getRandomGreeting = (name = "Deepansh")=>{
     return `${greeting}, ${name}! ${emoji}`;
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8XPx9":[function() {},{}],"lW6qc":[function() {},{}]},["farZc","1xC6H","8lqZg"], "8lqZg", "parcelRequire58be")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"deyeP":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9e5a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9e5a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _hugoPeek = require("../HugoPeek");
+var _hugoPeekDefault = parcelHelpers.interopDefault(_hugoPeek);
+const Body = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "hrafnagud-body",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "modules",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "module",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _hugoPeekDefault.default), {}, void 0, false, {
+                    fileName: "src/components/Body/Body.js",
+                    lineNumber: 9,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Body/Body.js",
+                lineNumber: 8,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
+            fileName: "src/components/Body/Body.js",
+            lineNumber: 7,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Body/Body.js",
+        lineNumber: 6,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Body;
+exports.default = Body;
+var _c;
+$RefreshReg$(_c, "Body");
+
+  $parcel$ReactRefreshHelpers$9e5a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../HugoPeek":"HhDtZ"}],"HhDtZ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>(0, _hugoPeekDefault.default));
+var _hugoPeek = require("./HugoPeek");
+parcelHelpers.exportAll(_hugoPeek, exports);
+var _hugoPeekDefault = parcelHelpers.interopDefault(_hugoPeek);
+
+},{"./HugoPeek":"dgLU4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dgLU4":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d64c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d64c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _peek = require("../Peek");
+var _peekDefault = parcelHelpers.interopDefault(_peek);
+var _s = $RefreshSig$();
+const HugoPeek = ()=>{
+    _s();
+    const [time, setTime] = (0, _react.useState)(new Date());
+    (0, _react.useEffect)(()=>{
+        const timer = setInterval(()=>{
+            setTime(new Date());
+        }, 1000);
+        return ()=>clearInterval(timer);
+    }, []);
+    const getOrdinalSuffix = (day)=>{
+        if (day >= 11 && day <= 13) return "th";
+        switch(day % 10){
+            case 1:
+                return "st";
+            case 2:
+                return "nd";
+            case 3:
+                return "rd";
+            default:
+                return "th";
+        }
+    };
+    const formatTimeString = ()=>{
+        const options = {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: true,
+            timeZone: "Asia/Kolkata"
+        };
+        return time.toLocaleTimeString("en-US", options);
+    };
+    const formatDateString = ()=>{
+        const formatter = new Intl.DateTimeFormat("en-US", {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            timeZone: "Asia/Kolkata"
+        });
+        const parts = formatter.formatToParts(time);
+        const weekday = parts.find((p)=>p.type === "weekday").value;
+        const day = parseInt(parts.find((p)=>p.type === "day").value);
+        const month = parts.find((p)=>p.type === "month").value;
+        const ordinal = getOrdinalSuffix(day);
+        return `${weekday}, ${day}${ordinal} of ${month}`;
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _peekDefault.default), {
+        cardClass: "clock",
+        firstSentence: formatTimeString(),
+        secondSentence: formatDateString(),
+        emoji: "\uD83D\uDD70\uFE0F",
+        buttonLink: "https://time.is/",
+        buttonName: "Hugo"
+    }, void 0, false, {
+        fileName: "src/components/HugoPeek/HugoPeek.js",
+        lineNumber: 56,
+        columnNumber: 5
+    }, undefined);
+};
+_s(HugoPeek, "I0+7QaEsXHXB0XO5JypI3yBHjPI=");
+_c = HugoPeek;
+exports.default = HugoPeek;
+var _c;
+$RefreshReg$(_c, "HugoPeek");
+
+  $parcel$ReactRefreshHelpers$d64c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../Peek":"41weA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"41weA":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>(0, _peekDefault.default));
+var _peek = require("./Peek");
+parcelHelpers.exportAll(_peek, exports);
+var _peekDefault = parcelHelpers.interopDefault(_peek);
+
+},{"./Peek":"7InAC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7InAC":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f73e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f73e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Peek = ({ cardClass = "", firstSentence, secondSentence, emoji, buttonLink, buttonName, isLive = true, statusButton = "" })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: `card ${cardClass} ${!isLive ? "greyscale" : ""}`,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "key-info-line",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "key-info-text",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "first",
+                                children: firstSentence
+                            }, void 0, false, {
+                                fileName: "src/components/Peek/Peek.js",
+                                lineNumber: 17,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "second",
+                                children: secondSentence
+                            }, void 0, false, {
+                                fileName: "src/components/Peek/Peek.js",
+                                lineNumber: 18,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Peek/Peek.js",
+                        lineNumber: 16,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "key-info-emoji",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            children: emoji
+                        }, void 0, false, {
+                            fileName: "src/components/Peek/Peek.js",
+                            lineNumber: 21,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/Peek/Peek.js",
+                        lineNumber: 20,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Peek/Peek.js",
+                lineNumber: 15,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "card-footer",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        className: "goto-button",
+                        href: buttonLink,
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                        children: buttonName
+                    }, void 0, false, {
+                        fileName: "src/components/Peek/Peek.js",
+                        lineNumber: 25,
+                        columnNumber: 9
+                    }, undefined),
+                    statusButton && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "status-circle btn-default",
+                        children: statusButton
+                    }, void 0, false, {
+                        fileName: "src/components/Peek/Peek.js",
+                        lineNumber: 34,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Peek/Peek.js",
+                lineNumber: 24,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Peek/Peek.js",
+        lineNumber: 14,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Peek;
+exports.default = Peek;
+var _c;
+$RefreshReg$(_c, "Peek");
+
+  $parcel$ReactRefreshHelpers$f73e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8XPx9":[function() {},{}],"lW6qc":[function() {},{}]},["farZc","1xC6H","8lqZg"], "8lqZg", "parcelRequire58be")
 
 //# sourceMappingURL=index.975ef6c8.js.map
